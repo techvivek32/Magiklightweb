@@ -14,6 +14,7 @@ import Testimonials from '@/components/Testimonials';
 import StoreDistributor from '@/components/StoreDistributor';
 import BlogPreview from '@/components/BlogPreview';
 import InstagramReels from '@/components/InstagramReels';
+import MagikClients from '@/components/MagikClients';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
       <StoreDistributor />
       <BlogPreview />
       <InstagramReels />
+      <MagikClients />
       <Footer />
     </main>
   );
