@@ -146,16 +146,8 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Visu Icon + Quick Enquiry + WhatsApp stacked */}
+      {/* Quick Enquiry + WhatsApp stacked */}
       <div className="fixed bottom-0 right-0 z-50 flex flex-col items-end">
-        {/* Visu icon */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/visu-icon.png"
-          alt="Visu"
-          className="w-16 h-16 object-contain mr-4 mb-1 pointer-events-none"
-        />
-
         {/* WhatsApp */}
         <a
           href="https://wa.me/919876543210"
