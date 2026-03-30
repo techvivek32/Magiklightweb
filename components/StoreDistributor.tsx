@@ -62,7 +62,7 @@ export default function StoreDistributor() {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="relative z-10 px-10 py-8 w-full max-w-md text-left"
+          className="relative z-10 px-6 py-8 w-full max-w-xl text-left ml-0"
         >
           <p className="text-white/80 text-xs tracking-widest uppercase mb-2 font-sans">Partner with us</p>
           <div className="relative inline-block mb-3">
