@@ -94,7 +94,7 @@ function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
 function NavItem({ item, isScrolled }: { item: typeof NAV[number]; isScrolled: boolean }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const textCls = isScrolled ? 'text-secondary hover:text-gold' : 'text-white hover:text-gold';
+  const textCls = 'text-secondary hover:text-gold';
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -151,7 +151,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'} ${hidden ? '-translate-y-full' : 'translate-y-0'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md ${hidden ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div className="container mx-auto px-6 py-1">
         <div className="flex items-center justify-between">
@@ -171,13 +171,13 @@ export default function Header() {
                 Become Distributor
               </Link>
               <img src="/centurtply .png" alt="CenturyPly" className="h-12 w-auto object-contain" />
-              <button className={`p-2 transition-colors duration-200 ${isScrolled ? 'text-secondary hover:text-gold' : 'text-white hover:text-gold'}`} aria-label="Search">
+              <button className="p-2 transition-colors duration-200 text-secondary hover:text-gold" aria-label="Search">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
               </button>
-              <Link href="/account" className={`p-2 transition-colors duration-200 ${isScrolled ? 'text-secondary hover:text-gold' : 'text-white hover:text-gold'}`} aria-label="Account">
+              <Link href="/account" className="p-2 transition-colors duration-200 text-secondary hover:text-gold" aria-label="Account">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
               </Link>
-              <Link href="/cart" className={`p-2 transition-colors duration-200 ${isScrolled ? 'text-secondary hover:text-gold' : 'text-white hover:text-gold'}`} aria-label="Cart">
+              <Link href="/cart" className="p-2 transition-colors duration-200 text-secondary hover:text-gold" aria-label="Cart">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               </Link>
             </div>
