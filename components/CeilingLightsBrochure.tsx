@@ -10,7 +10,7 @@ export default function CeilingLightsBrochure() {
         alt="Ceiling Lights"
         className="w-full h-auto block"
       />
-      <div className="absolute inset-0 bg-primary/20" />
+
       <div className="absolute inset-0 z-10 flex flex-col items-end justify-center pr-0 text-center px-6">
         <motion.div
           initial={{ opacity: 0, x: 30 }}
