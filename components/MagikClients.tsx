@@ -16,17 +16,16 @@ const logos = [
 export default function MagikClients() {
   return (
     <section className="py-6 bg-white overflow-hidden">
-      <h2 className="text-center text-2xl font-serif text-primary mb-8">Magik Clients</h2>
-      <div className="relative flex">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...logos, ...logos].map((src, i) => (
+      <h2 className="text-center text-4xl font-serif text-primary mb-8">Magik Clients</h2>
+      <div className="relative flex overflow-hidden">
+        <div className="flex animate-marquee">
+          {logos.map((src, i) => (
             // eslint-disable-next-line @next/next/no-img-element
-            <img
-              key={i}
-              src={src}
-              alt="client logo"
-              className="h-24 w-auto mx-10 object-contain"
-            />
+            <img key={`a-${i}`} src={src} alt="client logo" className="h-14 w-auto mx-8 object-contain flex-shrink-0" />
+          ))}
+          {logos.map((src, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={`b-${i}`} src={src} alt="client logo" className="h-14 w-auto mx-8 object-contain flex-shrink-0" />
           ))}
         </div>
       </div>
