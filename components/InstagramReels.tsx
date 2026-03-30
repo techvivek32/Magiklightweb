@@ -30,7 +30,7 @@ export default function InstagramReels() {
   };
 
   return (
-    <section className="py-8 px-6 bg-section">
+    <section className="py-16 px-6 bg-section">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
 

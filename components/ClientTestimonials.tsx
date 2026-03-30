@@ -143,9 +143,9 @@ export default function ClientTestimonials() {
                 <img
                   src={`https://img.youtube.com/vi/${video.ytId}/maxresdefault.jpg`}
                   alt={video.label}
-                  className="w-full h-full object-cover opacity-60"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
 
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
