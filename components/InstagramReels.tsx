@@ -87,15 +87,15 @@ export default function InstagramReels() {
                     className="flex-shrink-0 relative rounded-2xl overflow-hidden block"
                     style={{ width: 220, height: 390 }}
                   >
-                    {/* Embed scaled up to hide header/footer UI */}
-                    <div className="absolute inset-0" style={{ top: -60, bottom: -90, left: 0, right: 0 }}>
+                    {/* Scale up iframe to crop out Instagram UI */}
+                    <div className="absolute" style={{ top: '80%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                       <iframe
-                        src={`https://www.instagram.com/reel/${id}/embed/`}
-                        width="220"
-                        height="540"
+                        src={`https://www.instagram.com/reel/${id}/embed/captioned/`}
+                        width="300"
+                        height="700"
                         allowFullScreen
                         scrolling="no"
-                        style={{ border: 'none', pointerEvents: 'none' }}
+                        style={{ border: 'none', pointerEvents: 'none', transform: 'scale(1.1)', transformOrigin: 'center center' }}
                       />
                     </div>
                     {/* Transparent clickable overlay to block embed UI interactions */}
