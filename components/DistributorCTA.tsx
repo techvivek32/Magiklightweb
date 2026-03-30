@@ -5,34 +5,39 @@ import Image from 'next/image';
 
 export default function DistributorCTA() {
   return (
-    <section className="relative py-20 px-6 overflow-hidden">
-      <Image
-        src="/ind.jpg"
-        alt="Become a Distributor"
-        fill
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-primary/80" />
-      
+    <section className="py-16 px-6 bg-[#F8F6F2]">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="relative container mx-auto text-center text-white"
+        className="max-w-sm mx-auto rounded-2xl overflow-hidden shadow-xl bg-primary"
       >
-        <h2 className="text-4xl md:text-5xl font-serif mb-6">
-          Join Our Distributor Network
-        </h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Partner with India's leading lighting brand and grow your business with premium products and support
-        </p>
-        <motion.a
-          href="/distributor"
-          whileHover={{ scale: 1.05 }}
-          className="inline-block bg-gold hover:bg-goldHover text-white px-10 py-4 rounded-lg text-lg transition-all duration-300"
-        >
-          Become a Distributor
-        </motion.a>
+        {/* Image on top */}
+        <div className="relative w-full h-64">
+          <Image
+            src="/spotlights%20bd.png"
+            alt="Spotlight"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        {/* Content below */}
+        <div className="p-8 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-serif mb-4">
+            Join Our Distributor Network
+          </h2>
+          <p className="text-base mb-6 text-white/80">
+            Partner with India's leading lighting brand and grow your business with premium products and support
+          </p>
+          <motion.a
+            href="/distributor"
+            whileHover={{ scale: 1.05 }}
+            className="inline-block bg-gold hover:bg-goldHover text-white px-8 py-3 rounded-lg text-base transition-all duration-300"
+          >
+            Become a Distributor
+          </motion.a>
+        </div>
       </motion.div>
     </section>
   );

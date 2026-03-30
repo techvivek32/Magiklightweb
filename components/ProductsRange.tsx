@@ -7,7 +7,7 @@ import Link from 'next/link';
 const CATEGORIES = ['All', 'LED Bulb', 'LED Battens', 'LED Panel & Spotlights', 'LED Downlights', 'LED Bulkheads', 'LED Flood Lights', 'LED Strip Lights'];
 
 const RANGES = [
-  { title: 'LED Bulb Classic', category: 'LED Bulb', image: '/bulbone1.jpg', href: '/products/consumer' },
+  { title: 'LED Bulb Classic', category: 'LED Bulb', image: '/bulbone1.jpg', hoverImage: '/ledbulb11.jpeg', href: '/products/consumer' },
   { title: 'Liliput', category: 'LED Bulb', image: '/bulbone2.jpg', href: '/products/consumer' },
   { title: 'T-LITE', category: 'LED Bulb', image: '/bulbone3.jpg', href: '/products/consumer' },
   { title: 'POWER PLUS', category: 'LED Bulb', image: '/bulbone4.png', href: '/products/consumer' },
@@ -121,17 +121,25 @@ export default function ProductsRange() {
               >
                 <Link href={item.href} className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-black">
                   {/* Image */}
-                  <div className="h-64 overflow-hidden bg-gray-50">
+                  <div className="h-64 overflow-hidden bg-white relative">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.image}
                       alt={item.title}
-                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${'objectFit' in item && item.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                      className={`w-full h-full transition-opacity duration-500 ${'hoverImage' in item ? 'object-contain group-hover:opacity-0' : ('objectFit' in item && item.objectFit === 'contain' ? 'object-contain group-hover:scale-105' : 'object-cover group-hover:scale-105')}`}
                     />
+                    {'hoverImage' in item && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={(item as typeof item & { hoverImage: string }).hoverImage}
+                        alt={item.title}
+                        className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      />
+                    )}
                   </div>
                   {/* Name */}
-                  <div className="px-4 py-3 bg-black">
-                    <p className="text-base font-semibold tracking-widest text-white uppercase text-center">{item.title}</p>
+                  <div className="px-4 py-3 bg-black group-hover:bg-white transition-colors duration-500">
+                    <p className="text-base font-semibold tracking-widest text-white group-hover:text-black uppercase text-center transition-colors duration-500">{item.title}</p>
                   </div>
                 </Link>
               </motion.div>

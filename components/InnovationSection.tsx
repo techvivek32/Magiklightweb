@@ -13,7 +13,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Electricity Saving\nTechnology',
-    desc: 'Save up to 80% on electricity bills with advanced LED technology delivering maximum lumen output at minimal power consumption.',
+    desc: 'Efficient designs that reduce energy consumption without compromising performance.',
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Smart\nControls',
-    desc: 'Seamlessly control brightness, colour temperature and schedules via app or voice — putting the power of light at your fingertips.',
+    desc: 'Intuitive technology for effortless control and convenience.',
   },
   {
     icon: (
@@ -42,7 +42,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Advanced\nFinishes',
-    desc: 'Premium powder-coated and anodised finishes resist corrosion, heat and UV — keeping every fixture looking sharp for years.',
+    desc: 'Durable finishes that maintain beauty and long-lasting quality.',
   },
   {
     icon: (
@@ -55,7 +55,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Sustainable\nManufacturing',
-    desc: 'Our eco-conscious production processes minimise carbon footprint, use recyclable materials and comply with global environmental standards.',
+    desc: 'Responsible processes focused on minimizing environmental impact.',
   },
 ];
 

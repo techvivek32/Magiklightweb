@@ -6,8 +6,10 @@ import AboutMagikLED from '@/components/AboutMagikLED';
 import CenturyHouse from '@/components/CenturyHouse';
 import InnovationSection from '@/components/InnovationSection';
 import WhyMagik from '@/components/WhyMagik';
+import B2BProjectShowcase from '@/components/B2BProjectShowcase';
+import CeilingLightsBrochure from '@/components/CeilingLightsBrochure';
 import CorporateVideos from '@/components/CorporateVideos';
-import IndustrySolutions from '@/components/IndustrySolutions';
+import ClientTestimonials from '@/components/ClientTestimonials';
 import Testimonials from '@/components/Testimonials';
 import StoreDistributor from '@/components/StoreDistributor';
 import BlogPreview from '@/components/BlogPreview';
@@ -25,8 +27,10 @@ export default function Home() {
       <CenturyHouse />
       <InnovationSection />
       <WhyMagik />
+      <CeilingLightsBrochure />
+      <B2BProjectShowcase />
       <CorporateVideos />
-      <IndustrySolutions />
+      <ClientTestimonials />
       <Testimonials />
       <StoreDistributor />
       <BlogPreview />
